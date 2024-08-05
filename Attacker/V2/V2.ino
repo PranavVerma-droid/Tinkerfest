@@ -1,7 +1,6 @@
 #define CUSTOM_SETTINGS
 #define INCLUDE_GAMEPAD_MODULE
 #include <Dabble.h>
-#include <Servo.h>
 
 // Right Motor
 int enableRightMotor=5; 
@@ -13,9 +12,6 @@ int enableLeftMotor=6;
 int leftMotorPin1=9;
 int leftMotorPin2=10;
 
-// Servo
-int servoPin = 3; 
-Servo Servo1; 
 
 // Current State (Forward or Reverse Mode)
 char currentState = 'F';
@@ -29,9 +25,6 @@ void setup()
   pinMode(enableLeftMotor,OUTPUT);
   pinMode(leftMotorPin1,OUTPUT);
   pinMode(leftMotorPin2,OUTPUT);
-
-  Servo1.attach(servoPin); 
-
   rotateMotor(0,0);   
     
   Dabble.begin(9600, 2, 3);
